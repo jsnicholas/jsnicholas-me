@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <!-- My Styles -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./spectre.min.css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +21,26 @@
 <body>
   <header>
     <img src="./images/nicobutterfly.png" alt="Site Logo" />
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="container">
+      <div class="columns">
+        <div class="column col-auto">
+          <a href="#about">About</a>
+        </div>
+        <div class="column col-auto">
+          <a href="#projects">Projects</a>
+        </div>
+        <div class="column col-auto">
+          <a href="#writing">Writing</a>
+        </div>
+        <div class="column col-auto">
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
     <hr />
   </header>
   <main>
+    <!-- about me section -->
     <section id="about">
       <div class="circle"><img src="./images/nick.jpg" alt="A picture of Nick, the developer of this site." /></div>
       <h1>👋 Hello, I'm Nick.</h1>
@@ -40,84 +53,121 @@
           Mag</a>. I'd love to add your organization's name to this list. Drop me a line at <a
           href="mailto:jsnicholas@pm.me">jsnicholas@pm.me</a>
       </p>
-      <div class="socialLinks">
+      <!-- social links -->
+      <div class="socialLinks columns">
         <a href="https://www.linkedin.com/in/jsnicholas/"><img src="./images/linkedin.svg" alt="LinkedIn Profile" /></a>
         <a href="http://github.com/jsnicholas"><img src="./images/github.svg" alt="GitHub Page" /></a>
         <a href="http://medium.com/@harmoniacodes"><img src="./images/medium.svg" alt="Medium Profile" /></a>
-        <a href="https://tech.lgbt/@harmonia"><img src="./images/mastodon.svg" alt="Mastodon Page"></a>
       </div>
     </section>
+    <!-- Project Section -->
+    <section class="container mx-5" aria-label="Projects" id="projects">
+      <div class="h2">Projects</div>
+      <div class="columns">
+        <!-- First column -->
+        <div class="column col-6 col-md-12">
+          <!-- project card -->
+          <div class="card">
+            <div class="card-image" aria-hidden="true">
+              <a href="https://fullstack-blog.herokuapp.com/"><img src="./images/fs-blog.png"
+                  alt="Full-Stack Blog Screenshot" class="img-responsive" /></a>
+            </div>
+            <div class="card-header">
+              <div class="card-title h5">Full-Stack Blog Platform</div>
+              <div class="card-body"> FS-Blog is a no-frills blogging platform that allows for user registration, login
+                & authentication, and posting.
+                <a href="https://fullstack-blog.herokuapp.com/">Live Site→</a>
+                <a href="https://github.com/jsnicholas/fs-blog">GitHub→</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of project card -->
+          <!-- project card -->
+          <div class="card my-2">
+            <div class="card-image" aria-hidden="true">
+              <a href="https://jsnicholas.github.io/FitMix/"><img src="./images/fitmix_screenshot.png"
+                  alt="FitMix Screenshot" class="img-responsive" /></a>
+            </div>
+            <div class="card-header">
+              <div class="card-title h5">Fit Mix</div>
+              <div class="card-body">FitMix is a workout motivation app that leverages Spotify's music API and wger's
+                workout API to provide the
+                user with energetic music and exercises.
+                <a href="https://jsnicholas.github.io/FitMix/">Live Site→</a>
+                <a href="https://github.com/jsnicholas/FitMix">GitHub→</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of project card -->
 
-    <section id="projects" aria-label="Projects">
-      <!-- Featured Project Section -->
-      <div class="featuredProject">
-        <div class="featuredBanner" aria-hidden="true">
-          <a href="https://jsnicholas.github.io/FitMix/"><img src="./images/fitmix_screenshot.png"
-              alt="FitMix Screenshot" /></a>
         </div>
-        <div class="featuredDesc">
-          <h2>Featured Projects</h2>
-          <h3>FitMix</h3>
-          <p>FitMix is a workout motivation app that leverages Spotify's music API and wger's workout API to provide the
-            user with energetic music and exercises.</p>
-          <a href="https://jsnicholas.github.io/FitMix/">Live Site→</a>
-          <a href="https://github.com/jsnicholas/FitMix">GitHub→</a>
-        </div>
-      </div>
-      <!-- Other Projects -->
-      <!-- Left Side -->
-      <div class="projLeft">
-        <div class="projLeftImg" aria-hidden="true">
-          <a href="http://medium.com/@harmoniacodes"><img src="./images/mediumlogo.png" alt="Medium.com Logo" /></a>
-        </div>
-        <div class="projLeftDesc">
-          <h3>edTech Writing</h3>
-          <p>I write articles about applying developer principles within a classroom setting. You'll also find how-to
-            guides for some tech-related issues I've overcome during my time as a teacher.</p>
-          <a href="http://medium.com/@harmoniacodes">Take a Look→</a>
-        </div>
-      </div>
-      <!-- Left Side -->
-      <div class="projLeft">
-        <div class="projLeftImg" aria-hidden="true">
-          <a href="https://advice-generator-app-main-kohl.vercel.app/"><img src="./images/adviceproj.png"
-              alt="Screenshot of Advice App" /></a>
-        </div>
-        <div class="projLeftDesc">
-          <h3>Advice Generator</h3>
-          <p>This web app uses the <a href="http://api.adviceslip.com/">AdviceSlip API</a> to fetch a random piece of
-            advice. Built with vanilla JS, HTML, and CSS.</p>
-          <a href="https://advice-generator-app-main-kohl.vercel.app/">Live Site→</a>
-          <a href="https://github.com/jsnicholas/advice-generator-app-main">GitHub→</a>
-        </div>
-      </div>
-      <!-- Right Side -->
-      <div class="projRight">
-        <div class="projRightImg" aria-hidden="true">
-          <a href="http://basic-note-app.vercel.app/"><img src="./images/planner-screenshot.png"
-              alt="Screenshot of Hourly Planner App" /></a>
-        </div>
-        <div class="projRightDesc">
-          <h3>Work Day Planner</h3>
-          <p>This tool can be used to help plan your day hour-by-hour. It can help students plan out their studies or
-            class schedule. It can also be used to plan for upcoming meetings or events.
+        <!-- end of first column -->
 
-            This planner was created to display my knowledge of implementing third-party APIs, including jQuery, dayjs,
-            bootstrap, and Google Fonts.</p>
-          <a href="http://jsnicholas.github.io/hourly-work-planner">Live Site→</a>
-          <a href="https://github.com/jsnicholas/hourly-work-planner">GitHub→</a>
+
+        <!-- second column  -->
+        <div class="column col-6 col-md-12">
+          <div class="card">
+            <div class="card-image" aria-hidden="true">
+              <a href="https://github.com/jsnicholas/LaborHub"><img src="./images/LaborHub.png"
+                  alt="LaborHub Screenshot" class="img-responsive" /></a>
+            </div>
+            <div class="card-header">
+              <div class="card-title h5">LaborHub</div>
+              <div class="card-body">LaborHub is a member management system for local unions. It allows members to
+                check the due date for union dues, see organizational demographics, and contact their union
+                representative. It can also be used by employees who wish to discreetly share and compare salaries and
+                demographics.
+                <!-- <a href="https://jsnicholas.github.io/FitMix/">Live Site→</a> -->
+                <a href="https://github.com/jsnicholas/LaborHub">GitHub→</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of card -->
+          <!-- project card -->
+          <div class="card my-2">
+            <div class="card-image" aria-hidden="true">
+              <a href="https://advice-generator-app-main-kohl.vercel.app/"><img src="./images/adviceproj.png"
+                  alt="Screenshot of Advice App" class="img-responsive" /></a>
+            </div>
+            <div class="card-header">
+              <div class="card-title h5">Advice Generator</div>
+              <div class="card-body">
+                This web app uses the <a href="http://api.adviceslip.com/">AdviceSlip API</a> to fetch a random piece
+                of
+                advice. Built with vanilla JS, HTML, and CSS.</p>
+                <a href="https://advice-generator-app-main-kohl.vercel.app/">Live Site→</a>
+                <a href="https://github.com/jsnicholas/advice-generator-app-main">GitHub→</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of project card -->
+          <!-- end of second column -->
         </div>
-      </div>
+
+        <div class="col-8" id="writing">
+          <div class="h2">Writing</div>
+          <p>I write informative and humorous articles about the intersections of being an educator, queer, and a
+            software engineer. </p>
+          <div class="articleLinks">
+            <a
+              href="https://medium.com/@harmoniacodes/your-computer-is-homophobic-and-its-totally-your-fault-4c9d7f17920d?source=user_profile---------0----------------------------">Your
+              Computer is Homophobic, and it's Totally Your Fault →</a> <br>
+            <a
+              href="https://medium.com/@harmoniacodes/from-stem-to-agile-utilizing-engineering-frameworks-to-build-classroom-community-58372716c463?source=user_profile---------2----------------------------">From
+              STEM to Agile — Utilizing Engineering Frameworks to build Classroom Community →</a><br>
+            <a
+              href="https://medium.com/@harmoniacodes/chatgpt-bans-are-not-a-replacement-for-quantitative-educational-assessment-394d98ddd820?source=user_profile---------3----------------------------">ChatGPT
+              Bans are not a Replacement for Quantitative Educational Assessment →</a>
+          </div>
+        </div>
+
+
     </section>
     <!-- Contact Section -->
-    <section id="contact">
-      <div class="contactPortrait">
-        <img src="./images/nick2.jpg" alt="A picture of Nick, smiling at the camera and giving a peace sign." />
-      </div>
-      <div class="contactText">
-        <h2>Contact</h2>
-        <p>Whether it's through code, presentations, or learning and development, I'd love to help add to your company's
-          story. Let's build something together. Say hello: <a href="mailto:jsnicholas@pm.me">jsnicholas@pm.me</a></p>
+    <section id="contact" class="col-8">
+      <div class="h2">Contact</div>
+      <p>Whether it's through code, presentations, or learning and development, I'd love to help add to your company's
+        story. Let's build something together. Say hello: <a href="mailto:jsnicholas@pm.me">jsnicholas@pm.me</a></p>
       </div>
       </div>
     </section>
@@ -128,7 +178,6 @@
       <a href="https://www.linkedin.com/in/jsnicholas/"><img src="./images/linkedin.svg" alt="LinkedIn Profile" /></a>
       <a href="http://github.com/jsnicholas"><img src="./images/github.svg" alt="GitHub Page" /></a>
       <a href="http://medium.com/@harmoniacodes"><img src="./images/medium.svg" alt="Medium Profile" /></a>
-      <a href="https://tech.lgbt/@harmonia"><img src="./images/mastodon.svg" alt="Mastodon Page"></a>
     </div>
     <div>
 
