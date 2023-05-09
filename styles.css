@@ -105,32 +105,6 @@ header a {
     height: 2rem;
 }
 
-#writing, #contact {
-    margin-inline:2rem !important;
-}
-/* About Section Styling */
-#contact {
-    background-color: var(--color-background);
-}
-.contactPortrait {
-    display: flex;
-    background-color: var(--cardBackground);
-    padding: 3rem;
-width: 100%;
-justify-content: center;
-}
-.contactPortrait img {
-    max-width: 15rem;
-    border: 1rem solid var(--color-background);
-}
-.contactText {
-    margin: 0 auto;
-    padding: 1rem;
-    line-height: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    max-width: var(--gutter);
-}
 .articleLinks {
     display: flex;
     flex-direction: column;
