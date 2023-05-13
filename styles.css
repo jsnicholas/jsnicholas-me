@@ -38,9 +38,14 @@ body {
 }
 /* Header Styles */
 header {
+    margin-top:1rem;
     display: flex !important;
     flex-direction: column;
-    margin: 1rem;
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index:999;
 }
 header img {
     width: 7rem;
@@ -117,6 +122,10 @@ header a {
 #writing {
     margin-top:2rem;
     margin-bottom:2rem;
+}
+.thumbnail {
+    width:30%;
+    height:30%;
 }
 /* animation keyframes */
 @keyframes fadein {
