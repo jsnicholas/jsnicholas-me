@@ -1,12 +1,10 @@
-/* CSS Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* my css */
 /* custom properties */
 :root {
-    --color-background: linear-gradient(180deg, #fff 10%, #1e1e1e 50%);
     --color-text: #000000;
     --gradient: -webkit-linear-gradient(45deg, #59C1BD, #5a549a);
     --reverseGradient: -webkit-linear-gradient(45deg, #877ee9, #59C1BD);
@@ -18,15 +16,8 @@ html {
     scroll-behavior: smooth;
   }
 body {
-    background: var(--color-background);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--color-text);
     animation-name: fadein;
     animation-duration: 1s;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
 }
 #about a, #projects a,#writing a,#contact a {
     font-weight:700;
@@ -36,38 +27,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* Header Styles */
-header {
-    margin-top:1rem;
-    display: flex !important;
-    flex-direction: column;
-    position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: -3.8rem;
-  background-color: #fff;
-  z-index:999;
-}
-header img {
-    width: 7rem;
-    align-self: center !important;
-}
-header hr {
-    background-color: var(--color-text);
-    height: 1px;
-    border: none;
-    margin-top: 1rem;
-}
-header nav {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-}
-header a {
-    color: var(--color-text) !important;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
 /* About Me Section Styling */
 .circle {
     margin: 1rem auto;
@@ -77,21 +36,13 @@ header a {
 }
 .circle img {
     width: 100%;
-    border: 0.5rem solid var(--cardBackground);
+    border: 0.2rem solid var(--cardBackground);
     border-radius: 50%;
 }
 #about {
-    display: flex;
-    flex-direction: column;
     margin: 1.5rem auto;
     max-width: var(--gutter);
-    padding:1.5rem;
-}
-#about p {
-    font-weight:500;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
-
+    padding:1.5rem; 
 }
 .gradientText {
     background: var(--gradient);
@@ -115,20 +66,9 @@ header a {
     flex-direction: column;
     gap: 0.2rem;
 }
-.card {
-    margin: 2rem 0 2rem 0;
-    box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15)
-}
 #writing {
     margin-top:2rem;
     margin-bottom:2rem;
-}
-.thumbnail {
-    width:30%;
-    height:30%;
-}
-.h2 {
-    margin-top:5rem;
 }
 /* animation keyframes */
 @keyframes fadein {
