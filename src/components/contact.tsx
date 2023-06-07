@@ -32,6 +32,7 @@ function Contact() {
 const messageContent = document.getElementById("messageContent");
 function handleMail(event) {
   event.preventDefault;
+  //@ts-expect-error: value will be null until user creates input
   window.location.href = `mailto:jsnicholas@pm.me?body=${messageContent.value}`;
 }
 
