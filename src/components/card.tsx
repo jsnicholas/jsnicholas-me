@@ -1,9 +1,11 @@
+import { ReactNode } from "react";
+
 // define types for each value
 type CardProps = {
   imageURL: string;
   imageAlt: string;
   cardTitle: string;
-  cardDesc: string;
+  cardDesc: string | ReactNode;
   githubLink: string;
   demoLink: string;
 };

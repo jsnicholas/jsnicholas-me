@@ -19,7 +19,7 @@ body {
     animation-name: fadein;
     animation-duration: 1s;
 }
-#about a, #projects a, .articleLinks a{
+#about a, .card p a, .articleLinks a{
     font-weight:700;
     color: #000000;
     background: var(--reverseGradient);
