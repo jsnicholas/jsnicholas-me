@@ -7,29 +7,32 @@ function Contact() {
         building, I'd love to help add to your company's story.{" "}
         <span className="gradientText">Let's build something together.</span>
       </p>
-      <div className="mx-auto max-w-3xl">
-        <div className="mx-auto form-control w-full max-w-lg">
+      <div className="container content-center mx-auto my-8">
+        <form className="join w-full">
           <input
-            type="text"
-            placeholder="Your Name"
-            className="my-4 input input-bordered w-full max-w-lg"
-          />
-          <input
-            type="text"
+            id="messageContent"
+            name="message"
+            type="textarea"
             placeholder="Your Message"
-            className="input input-bordered w-full max-w-lg my-2"
+            className="join-item textarea textarea-bordered textarea-md w-full"
           />
-          <a
-            className="mx-auto my-4 max-w-lg btn btn-md btn-outline btn-secondary"
-            onClick={() => {
-              console.log("hello");
+          <input
+            value="Send"
+            type="button"
+            className="join-item max-w-lg btn btn-lg btn-outline btn-secondary"
+            onClick={(event) => {
+              handleMail(event);
             }}
-          >
-            Send
-          </a>
-        </div>
+          />
+        </form>
       </div>
     </section>
   );
 }
+const messageContent = document.getElementById("messageContent");
+function handleMail(event) {
+  event.preventDefault;
+  window.location.href = `mailto:jsnicholas@pm.me?body=${messageContent.value}`;
+}
+
 export default Contact;

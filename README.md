@@ -2,7 +2,11 @@
 
 ## Description
 
+My portfolio of my recent work. Includes demonstrations of my software engineering, writing, and drawing work. Built with React, Typescript, TailwindCSS, DaisyUI.
+
 ## Screenshots
+
+<img src="./src/assets/images/portfolio_screenshot.png">
 
 ## Usage
 
