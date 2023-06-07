@@ -19,7 +19,7 @@ body {
     animation-name: fadein;
     animation-duration: 1s;
 }
-#about a, #projects a,#writing a,#contact a {
+#about a, #projects a, .articleLinks a{
     font-weight:700;
     color: #000000;
     background: var(--reverseGradient);
@@ -41,7 +41,7 @@ body {
 }
 #about {
     margin: 1.5rem auto;
-    max-width: var(--gutter);
+    /* max-width: var(--gutter); */
     padding:1.5rem; 
 }
 .gradientText {
