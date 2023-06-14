@@ -29,14 +29,14 @@ body {
 }
 /* About Me Section Styling */
 .circle {
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     border-radius: 50%;
-    width: 10rem;
-    height:10rem;
+    width: 13rem;
+    height:13rem;
 }
 .circle img {
     width: 100%;
-    border: 0.2rem solid var(--cardBackground);
+    border: 0;
     border-radius: 50%;
 }
 #about {
